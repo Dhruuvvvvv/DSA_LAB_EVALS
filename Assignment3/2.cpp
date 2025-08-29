@@ -29,7 +29,7 @@ public:
     char pop() {
         if (isEmpty()) {
             cout << "Stack Underflow!\n";
-            return '\0';  // return null char if empty
+            return '\0';  
         }
         return arr[top--];
     }
@@ -40,14 +40,14 @@ int main() {
     string str;
 
     cout << "Enter a string: ";
-    cin >> str;   // input one word like "DataStructure"
+    cin >> str;  
 
-    // Push all characters into stack
+
     for (int i = 0; i < str.length(); i++) {
         s.push(str[i]);
     }
 
-    // Pop characters and print (reversed order)
+    
     cout << "Reversed string: ";
     while (!s.isEmpty()) {
         cout << s.pop();
