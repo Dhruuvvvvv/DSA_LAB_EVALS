@@ -1,23 +1,17 @@
 #include <iostream>
 using namespace std;
-
 #define MAX 5  
-
 class Stack {
     int arr[MAX];
     int top;
-
 public:
     Stack() { top = -1; }
-
     bool isEmpty() {
         return (top == -1);
     }
-
     bool isFull() {
         return (top == MAX - 1);
     }
-
     void push(int x) {
         if (isFull()) {
             cout << "Stack Overflow!\n";
@@ -26,7 +20,6 @@ public:
         arr[++top] = x;
         cout << x << " pushed into stack\n";
     }
-
     void pop() {
         if (isEmpty()) {
             cout << "Stack Underflow!\n";
